@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <Button
+        android:layout_marginRight="105dp"
+        android:id="@+id/showme"
+        android:visibility="invisible"
+        android:layout_marginTop="45dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="showme"/>
+
+<EditText
+    android:layout_marginTop="15dp"
+    android:layout_marginLeft="15dp"
+    android:background="@color/white"
+    android:layout_width="100dp"
+    android:visibility="invisible"
+    android:layout_height="wrap_content"
+    android:text="LB"
+    android:id="@+id/reggi"
+    android:textAllCaps="true"/>
+
+<Button
+    android:layout_marginRight="15dp"
+    android:layout_marginTop="85dp"
+    android:visibility="invisible"
+    android:id="@+id/del"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="last"/>
+
+    <ImageView
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="175dp"
+        android:onClick="sate"
+        android:visibility="invisible"
+        android:src="@drawable/satellite_in_orbit_26px"
+        android:layout_width="25dp"
+        android:layout_height="25dp"/>
+    <ImageView
+        android:onClick="terr"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="135dp"
+        android:visibility="invisible"
+        android:src="@drawable/mm"
+        android:layout_width="25dp"
+        android:layout_height="25dp"/>
+    <LinearLayout
+        android:layout_marginTop="40dp"
+        android:layout_alignParentRight="true"
+        android:orientation="vertical"
+        android:id="@+id/gapdal"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+        <TextView
+            android:textSize="12dp"
+            android:layout_margin="5dp"
+            android:onClick="keymir"
+            android:drawableLeft="@drawable/split_48px"
+            android:textColor="#0382DB"
+            android:gravity="center_vertical"
+            android:fontFamily="serif"
+            android:textStyle="bold"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Stansiýalar"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:layout_gravity="center_vertical"
+            android:id="@+id/sanawstan"/>
+    </LinearLayout>
+    <RelativeLayout
+        android:background="@drawable/grad"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_toStartOf="@id/gapdal"
+        android:layout_height="120dp"/>
+    <RelativeLayout
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_toStartOf="@id/gapdal"
+        android:layout_height="89dp">
+
+        <TextView
+            android:id="@+id/yazgy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:textSize="15dp"
+            android:layout_marginTop="45dp"
+            android:layout_marginRight="5dp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/gajraj_one"
+            android:text="Ýurdumyzyň  demirýollarynyň  merkezleşdirilen kartasy - Häzirki wagtda bar bolan demir ýollaryň uzynlygy 5173,4 kilometre ýetýär" />
+
+    </RelativeLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/wels"
+        android:layout_marginRight="5dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</RelativeLayout>
